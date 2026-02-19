@@ -1,30 +1,30 @@
 class Tailchat < Formula
   desc "End-to-end encrypted terminal chat over Tailscale"
   homepage "https://github.com/NathanBhanji/tail-chat"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
 
   on_macos do
     on_intel do
-      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.2.0/tailchat_darwin_amd64.tar.gz"
-      sha256 "0612b61e71af86fdcdf06268818ed6a3ae608e5881e3233c440ae7cab8600984"
+      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.3.0/tailchat_darwin_amd64.tar.gz"
+      sha256 "b48b72a591b62fac0b8dfdb9a6e15c8d4d3066d0e3e805d9ab21e7ca2deccf34"
     end
 
     on_arm do
-      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.2.0/tailchat_darwin_arm64.tar.gz"
-      sha256 "43876f5c44dbcc3b58978f8393a7bf39bf9d2794c7cc6109067ff3b4a2d2bfa7"
+      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.3.0/tailchat_darwin_arm64.tar.gz"
+      sha256 "b072b9c02d28193ccc9080a17dbcc2dad88501906117c354eb0ce51e9c48c2b9"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.2.0/tailchat_linux_amd64.tar.gz"
-      sha256 "122d546f97802456f08df5bed5b4891ca751d31aa7d8664d2627fda37b9b9c47"
+      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.3.0/tailchat_linux_amd64.tar.gz"
+      sha256 "17ced46e7010f094a47a81170960cd3d231ba53633abb7996118b2fe26d54565"
     end
 
     on_arm do
-      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.2.0/tailchat_linux_arm64.tar.gz"
-      sha256 "9876c610c512342a7ff34bc6227c37c2a5f13bf834e7013885c2a38d1730c1d2"
+      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.3.0/tailchat_linux_arm64.tar.gz"
+      sha256 "8d14926f4085777babb59cca63b24bfc90a5c1801d75ccd9cc652bd596ca5771"
     end
   end
 
