@@ -11,7 +11,7 @@ class Tailchat < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.6.0/tailchat_darwin_amd64.tar.gz"
-      sha256 "a883f1c668e750bf2b726eac7edde5d69e3c73d41632fb59a2092d177217e7f8"
+      sha256 "0fc7c6813a8c93683b5ff09137643f0c6d7c03c848f7a10509b11911312018d7"
 
       def install
         bin.install "tailchat"
@@ -19,7 +19,7 @@ class Tailchat < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.6.0/tailchat_darwin_arm64.tar.gz"
-      sha256 "475ab97df52087490fd3e09e882b621234afe0760fbf34c12de66d671d416114"
+      sha256 "080933fb3ccbf74bb69f44d570f5e88a49965794b1a412c5d8369b78741cf285"
 
       def install
         bin.install "tailchat"
@@ -30,14 +30,14 @@ class Tailchat < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.6.0/tailchat_linux_amd64.tar.gz"
-      sha256 "331a520a770445e0f16dc73d41071b2d6db18352658f8ec94dd397b426063a25"
+      sha256 "cad3c91be1f1c5c5e4e3fd6d83e28e9d0dc4ed88c46fbe41536478163dd37ce3"
       def install
         bin.install "tailchat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.6.0/tailchat_linux_arm64.tar.gz"
-      sha256 "e324c7b3aa938bdd7af89dbb44c70a053960e6a9a2b745d43ed273a08c0f27b4"
+      sha256 "b33b935339629cc8d87595c9cb0479a715284934fa9ea4dfb696e19b6cbecd1a"
       def install
         bin.install "tailchat"
       end
