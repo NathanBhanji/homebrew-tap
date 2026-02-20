@@ -5,21 +5,21 @@
 class Tailchat < Formula
   desc "End-to-end encrypted terminal chat over Tailscale"
   homepage "https://github.com/NathanBhanji/tail-chat"
-  version "0.6.0"
+  version "0.6.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.6.0/tailchat_darwin_amd64.tar.gz"
-      sha256 "0fc7c6813a8c93683b5ff09137643f0c6d7c03c848f7a10509b11911312018d7"
+      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.6.1/tailchat_darwin_amd64.tar.gz"
+      sha256 "ed7971467fe0deaee58c9b72b6a01ce59a4524478bad9ba1fbbe5c4e586663d6"
 
       def install
         bin.install "tailchat"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.6.0/tailchat_darwin_arm64.tar.gz"
-      sha256 "080933fb3ccbf74bb69f44d570f5e88a49965794b1a412c5d8369b78741cf285"
+      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.6.1/tailchat_darwin_arm64.tar.gz"
+      sha256 "ac323cc6e997a7b717f070c76509e2bf041cc9b3e5c109103666b589d5477b48"
 
       def install
         bin.install "tailchat"
@@ -29,15 +29,15 @@ class Tailchat < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.6.0/tailchat_linux_amd64.tar.gz"
-      sha256 "cad3c91be1f1c5c5e4e3fd6d83e28e9d0dc4ed88c46fbe41536478163dd37ce3"
+      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.6.1/tailchat_linux_amd64.tar.gz"
+      sha256 "f9f557e59e3a6e8b945d2a3d275ee7ef845bbad4a8618916f1c0c0fe1c1ab413"
       def install
         bin.install "tailchat"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.6.0/tailchat_linux_arm64.tar.gz"
-      sha256 "b33b935339629cc8d87595c9cb0479a715284934fa9ea4dfb696e19b6cbecd1a"
+      url "https://github.com/NathanBhanji/tail-chat/releases/download/v0.6.1/tailchat_linux_arm64.tar.gz"
+      sha256 "016315e292efe88629363937b8249f3c5275e35cfe88d77dccb2ad710c9b13f5"
       def install
         bin.install "tailchat"
       end
