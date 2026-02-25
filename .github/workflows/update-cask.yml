@@ -1,0 +1,32 @@
+name: Update Traceroute Cask
+
+on:
+  repository_dispatch:
+    types: [new-release]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout tap
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update cask version and SHA256
+        env:
+          VERSION: ${{ github.event.client_payload.version }}
+          SHA256: ${{ github.event.client_payload.sha256 }}
+        run: |
+          sed -i "s/version \".*\"/version \"${VERSION}\"/" Casks/traceroute.rb
+          sed -i "s/sha256 \".*\"/sha256 \"${SHA256}\"/" Casks/traceroute.rb
+
+      - name: Commit and push
+        env:
+          VERSION: ${{ github.event.client_payload.version }}
+        run: |
+          git config user.name "NathanBhanji"
+          git config user.email "nathan@bhanji.dev"
+          git add Casks/traceroute.rb
+          git commit -m "chore: update traceroute cask to v${VERSION}"
+          git push
